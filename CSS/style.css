@@ -1,0 +1,166 @@
+/* Aplica box-sizing a todos los elementos para incluir 
+bordes y padding dentro del tamaño del elemento. 
+Resetea el margen y padding a cero */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Define el estilo global del cuerpo de la página. Establece una fuente,
+un fondo degradado,
+y centra el contenido en la pantalla */
+
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #f06, #4a90e2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Contenedor del formulario,
+con un fondo blanco,
+sombras,
+bordes redondeados y una animación que lo hace flotar suavemente */
+
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* Define una animación que hace que el contenedor 
+del formulario flote hacia arriba y hacia abajo */
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/* Estilo para el título del formulario,
+con margen inferior y una animación de aparición suave */
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+
+/* Animación de desvanecimiento para hacer que el texto 
+del título aparezca desde arriba */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Estilos para los campos de entrada del formulario y el área de texto,
+con un ancho completo,
+bordes redondeados y efectos de transición para el foco */
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Efecto visual cuando los campos de entrada están en foco,
+cambiando el color del borde y añadiendo una sombra */
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+}
+
+.form-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Estilo del botón de envío,
+con color de fondo azul,
+bordes redondeados y un efecto de transición para el hover */
+
+.form-container button:hover {
+    background-color: #357abd;
+    transform: scale(1.05);
+}
+
+
+/* Efecto hover para el botón,
+cambiando el color de fondo y aumentando ligeramente su tamaño */
+
+.form-container p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+/* Estilo para el texto debajo del formulario,
+con animación de desvanecimiento suave */
+
+.form-container a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* Estilo para el enlace de inicio de sesión,
+sin subrayado y con transición de color en hover */
+
+.form-container a:hover {
+    text-decoration: underline;
+    color: #357abd;
+}
+
+
+/* Efecto hover para el enlace,
+subrayado y cambio de color */
